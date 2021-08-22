@@ -46,7 +46,7 @@ const POST_MESSAGE = gql`
   }
 `;
 
-const Messages = ({user}) =>{
+const Messages = ({user}) => {
   const {data} = useSubscription(GET_MESSAGES);
   if (!data) {
       return null;
@@ -75,13 +75,13 @@ const Messages = ({user}) =>{
 }
 
 export const Chat = () => {
-  const [user, setUser] = useState('Phuc');
+  const [user, setUser] = useState('Phuc Nguyen');
   const [text, setText] = useState('');
   const [postMessage] = useMutation(POST_MESSAGE);
   const sendMessage = () => {
     if(text.length > 0 && user.length > 0) {
       postMessage({
-        variables:{
+        variables: {
           user: user,
           text: text,
         }
@@ -134,5 +134,5 @@ export const Chat = () => {
         </Grid>
       </Grid>
     </Container>
-  )
+  );
 }

@@ -5,7 +5,7 @@ import { client, Chat } from './Chat';
 function App() {
   return ( 
     <ApolloProvider client={client}>
-      <div className = "App">
+      <div className = 'App'>
         <h2>Messages 💭</h2>
         <Chat/>
       </div>

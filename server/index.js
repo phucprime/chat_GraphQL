@@ -56,6 +56,4 @@ const server =
     context: { pubsub },
   });
 
-server.start(({ port }) => {
-  console.log(`Server on http://localhost:${port}/`);
-});
+server.start(({ port }) => console.log(`Server on http://localhost:${port}/`));
